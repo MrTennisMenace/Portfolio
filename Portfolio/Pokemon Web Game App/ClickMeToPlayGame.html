@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Pokemon Game</title>
+        <link rel="stylesheet" type="text/css" href="stylesheets/pokemongame.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src = "js/pokemongame.js"></script>
+    </head>
+    
+    <body onload = "init();">
+        <h1>POKEMON GAME</h1>
+        
+        <!-- Poke Coin Table -->
+        <table id = "pokeWinTable">
+            <tr>
+                <th id = "pokeWinText">Poke Wins</th>
+            </tr>
+            <tr>
+                <td id = "pokewin">0</td>
+            </tr>
+        </table>
+        
+        <!-- Inventory Table -->
+        <table id = "inventory">
+            <tr>
+                <th id = "title" colspan = "2">Inventory</th>
+            </tr>
+            <tr>
+                <td>Potion</td>
+                <td id = "potion">0</td>
+            </tr>
+            <tr>
+                <td>Super Potion</td>
+                <td id = "superPotion">0</td>
+            </tr>
+        </table>
+        
+        <!-- Pokemon Table -->
+        <table id ="pokemon" colspan = "4">
+            <tr>
+                <th id = "pokemonTitle" colspan = "4">Trainer's Pokemon</th>
+            </tr>
+            <tr>
+                <td>Pokemon Name</td>
+                <td>Level</td>
+                <td>Attack</td>
+                <td>Health</td>
+            </tr>
+            
+            <tr>
+                <td>Charizard</td>
+                <td id = "level">1</td>
+                <td id = "attack">1</td>
+                <td id = "health">5/5</td>
+            </tr>
+        </table>
+        
+        <!-- Pokemon Table -->
+        <table id ="wildPokemon" colspan = "4">
+            <tr>
+                <th id = "wildPokemonTitle" colspan = "4">Wild Pokemon</th>
+            </tr>
+            <tr>
+                <td>Pokemon Name</td>
+                <td>Level</td>
+                <td>Attack</td>
+                <td>Health</td>
+            </tr>
+            
+            <tr>
+                <td id = "wildName">Pokemon</td>
+                <td id = "wildLevel">0</td>
+                <td id = "wildAttack">0</td>
+                <td id = "wildHealth">0</td>
+            </tr>
+        </table>
+        
+        <canvas id = "gameCanvas" tableindex = "1" width = "450px" height = "450px"></canvas>
+        
+        <button id = "battleText">Wild Pokemon has appeared!</button>
+        <button id = "continue">Continue</button>
+        <button id = "gameChoiceQ">Do you want to battle?</button>
+        <button id = "yes">Yes</button>
+        <button id = "no">No</button>
+        <button id = "battleItem">Item Options</button>
+        <button id = "battleAttack">Attack Options</button>
+        <button id = "backToOptions">Back to options</button>
+        <button id = "fireBall">Fireball</button>
+        <button id = "scratch">Scratch</button>
+        <button id = "battlePotion">Potion</button>
+        <button id = "battleSuperPotion">Super Potion</button>
+    </body>
+</html>

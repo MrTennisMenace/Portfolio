@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<HTML>
+    <head>
+        <link rel="stylesheet" href="Encrypt.css">
+    </head>
+    <body>
+        <ul class="menu">
+            <li class="menuTab"><a id ="aboutElement" href="About.html">About</a></li>
+            <li class="menuTab"><a id ="encryptionElement" href="Encryption.html">Encryption</a></li>
+            <li class="menuTab"><a id ="decryptionElement" href="Decryption.html">Decryption</a></li>
+            <li class="menuTab"><a id ="problemElement" href ="Problems.html">Problems</a></li>
+            <li class="menuTab"><a id ="calculatorElement" href = "Calculator.html">Calculator</a></li>
+            <li class="menuTab"><a id ="groupElement" href = "Group.html">Group Members</a></li>
+        </ul>
+        
+        <h1 id = "titlePage">RSA Encryption</h1>
+        
+        <br>
+        <p class="step">Encryption equation: y = x^E mod n</p>
+        <p class="step"><b>Step One: To start RSA encryption, you will need to determine your n and E values.</b></p>
+        <ul>
+            <li class="step">Your n value must be the product of two relatively prime numbers p and q.</li>
+            <li class="step">Let’s use the values p = 11 and q = 19 to find our n value.</li>
+            <li class="step">n = 11 ∗ 19 = 209</li>
+            <li class="step">To obtain your E value, you must find a value that is relatively prime to the totient of n, called m.</li>
+            <li class="step">m = (p – 1)∗(q – 1)</li>
+            <li class="step">In this case m = (11-1)∗(19-1) = 180. Therefore, we can choose any value for E that is relatively prime to 180.</li>
+            <li class="step">Since 180 is our m, we can choose 23 as our E value.</li>
+            <ul>
+                <li class="step">Note: gcd(23,180) = 1.</li>
+            </ul>
+        </ul>
+        
+        <br>
+        
+        <p class="step"><b>Step Two: Let’s say you want to encrypt the word MATH, convert each letter to an index of the alphabet, with the letter 'A' starting at 0.</b></p>
+        <table>
+            <tr>
+                <td>A</td>
+                <td>B</td>
+                <td>C</td>
+                <td>D</td>
+                <td>E</td>
+                <td>F</td>
+                <td>G</td>
+                <td>H</td>
+                <td>I</td>
+                <td>J</td>
+                <td>K</td>
+                <td>L</td>
+                <td>M</td>
+                <td>N</td>
+                <td>O</td>
+                <td>P</td>
+                <td>Q</td>
+                <td>R</td>
+                <td>S</td>
+                <td>T</td>
+                <td>U</td>
+                <td>V</td>
+                <td>W</td>
+                <td>X</td>
+                <td>Y</td>
+                <td>Z</td>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+                <td>21</td>
+                <td>22</td>
+                <td>23</td>
+                <td>24</td>
+                <td>25</td>
+            <tr>
+        </table>
+        <ul>
+            <li class="step">M is the 13th letter of the alphabet, but since we start at index 0, M will be 12</li>
+            <li class="step">M = 12, A = 0, T = 19, H = 7</li>
+        </ul>
+        
+        <br>
+        
+        <p class="step"><b>Step Three: Find your encrypted RSA values by using the formula y = x^E mod n, where y is your
+ciphertext value, x is your value for each letter from Step Two, and E is your encryption key from Step
+One.</b></p>
+        <ul>
+            <li class="step">For M, y = 12^23 mod 209, therefore y = 122</li>
+            <li class="step">For A, y = 0^23 mod 209, therefore y = 0</li>
+            <li class="step">For T, y = 19^23 mod 209, therefore y = 171</li>
+            <li class="step">For H, y = 7^23 mod 209, therefore y = 68</li>
+        </ul>
+        
+        <br>
+        
+        <p class="step"><b>Step Four: Your ciphertext values are the final values from Step Three, and is the message you will send
+for someone to decrypt.</b></p>
+        <ul>
+            <li class="step">Send: 122, 0, 171, 68</li>
+        </ul>
+        
+        <script src="jquery-1.9.1.min.js"></script>
+        <script src="Encryption.js"></script>
+    </body>
+</HTML>

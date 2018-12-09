@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<HTML>
+    <head>
+        <link rel="stylesheet" href="Encrypt.css">
+    </head>
+    <body>
+        <ul class="menu">
+            <li class="menuTab"><a id ="aboutElement" href="About.html">About</a></li>
+            <li class="menuTab"><a id ="encryptionElement" href="Encryption.html">Encryption</a></li>
+            <li class="menuTab"><a id ="decryptionElement" href="Decryption.html">Decryption</a></li>
+            <li class="menuTab"><a id ="problemElement" href ="Problems.html">Problems</a></li>
+            <li class="menuTab"><a id ="calculatorElement" href = "Calculator.html">Calculator</a></li>
+            <li class="menuTab"><a id ="groupElement" href = "Group.html">Group Members</a></li>
+        </ul>
+        
+        <h1 id = "titlePage">RSA Decryption</h1>
+        
+        <br>
+        <p class="step">Decryption equation: decrypted text = c^D mod n</p>
+        <ul>
+            <ul>
+                <li class="step">Note: c = Ciphertext and D = Decrypt Key</li>
+            </ul>
+        </ul>
+        <br>
+        
+        <p class="step"><b>Step One: Find the value for n. In order to know n, we need to have the factors p and q. Following from our encryption example we will have our p = 11, q =11, and E = 23.</b></p>
+        <ul>
+            <li class="step">Remember that n = p∗q.</li>
+            <ul>
+                <li class="step">n = (11)∗(19) = 209.</li>
+            </ul>
+        </ul>
+        <br>
+        
+        <!-- STEP TWO -->
+        <p class="step"><b>Step Two: Find the value for the decryption key D.</b></p>
+        <ul>
+            <li class="step">Perform gcd(E, m); stop at the last non-zero remainder.</li>
+            <ul>
+                <li class="step">gcd(23,180):</li>
+                <ul>
+                    <!-- <li class="step"><b class="red">hello</b></li> -->
+                    <li class="step">180 = p ∗ (23) + r</li>
+                    <ul>
+                        <li class="step">Note: 'p' is how many times 23 can go into 180, 'r' means remainder.</li>
+                    </ul>
+                    <li class="step">180 = 7 ∗ 23 + 19</li>
+                    <li class="step">23 = 1 ∗ 19 + 4</li>
+                    <li class="step">19 = 4 ∗ 4 + 3</li>
+                    <li class="step">4 = 1 ∗ 3 + 1</li>
+                </ul>
+            </ul>
+            <li class="step">Perform the Extended Eculidean Algorithm:</li>
+            <ul>
+                <li class="step">1 = 4 - 1(<b class="red">3</b>)</li>
+                    <ul>
+                        <li class="step">Make successive subsitutions from the remainders.</li>
+                            <ul>
+                                <li class="step">Substitute <b class="red">3</b> with <b class="red">19 - 4(4)</b>.</li>
+                            </ul>
+                    </ul>
+                <li class="step">1 = 4 - 1(<b class="red">19 - 4(4)</b>)</li>
+                <ul>
+                    <li class="step">Distribute.</li>
+                </ul>
+                <li class="step">1 = 4 - 1(19) + 4(4)</li>
+                <ul>
+                    <li class="step">Combine common values(hint: combine the 4's).</li>
+                </ul>
+                <li class="step">1 = 5(<b class="red">4</b>) - 1(19)</li>
+                <ul>
+                    <li class="step">Substitute 4 with <b class="red">23 - 1(19)</b>.</li>
+                </ul>
+                <li class="step">1 = 5(23 - 1(19)) - 1(19)</li>
+                <ul>
+                    <li class="step">Distribute.</li>
+                </ul>
+                <li class="step">1 = 5(23) - 5(19) - 1(19)</li>
+                <ul>
+                    <li class="step">Combine common values(hint: combine the 19's).</li>
+                </ul>
+                <li class="step">1 = 5(23) - 6(<b class="red">19</b>)</li>
+                <ul>
+                    <li class="step">Substitute 19 with <b class="red">180 - 7(23)</b>.</li>
+                </ul>
+                <li class="step">1 = 5(23) - 6(180 - 7(23))</li>
+                <ul>
+                    <li class="step">Distribute.</li>
+                </ul>
+                <li class="step">1 = 5(23) - 6(180) + 42(23)</li>
+                <ul>
+                    <li class="step">Combine common values(hint: combine the 23's).</li>
+                </ul>
+                <li class="step">1 = <b class="red">47</b>(23) - 6(180)</li>
+                <ul>
+                    <li class="step">Our Decryption Key is <b class="red">47</b>.</li>
+                    <li class="step">Notice 23 is our Encryption Key and 180 is our m(totient of n).</li>
+                    <li class="step">When you do the Extended Euclidean Algorithm and you are left with your E and m, the value that is multiplied with E is your D.</li>
+                </ul>
+            </ul>
+        </ul>
+        
+        <!-- STEP THREE -->
+            <p class="step"><b>Step Three: For each individual cipher text c, perform the equation: c^D mod n. Make sure to only decrypt a letter at a time.</b></p>
+        <ul>
+            <li class="step">Decrypt the cipher text: 122, 0, 171, 68. </li>
+            <ul>
+                <li class="step">122 ^ 47 mod 209 = 12</li>
+                <li class="step">0 ^ 47 mod 209 = 0</li>
+                <li class="step">171 ^ 47 mod 209 = 19</li>
+                <li class="step">68 ^ 47 mod 209 = 7</li>
+            </ul>
+        </ul>
+        <li class="step">12, 0, 19, 7 translates to: MATH</li>
+        
+        <script src="jquery-1.9.1.min.js"></script>
+        <script src="Decrypt.js"></script>
+    </body>
+</HTML>

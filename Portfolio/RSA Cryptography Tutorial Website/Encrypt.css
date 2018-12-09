@@ -1,0 +1,170 @@
+body{
+    background-color:cadetblue;
+}
+
+table{
+    border:1px solid black;
+    border-collapse: collapse;
+}
+
+.inline{
+    margin-left:10px;
+    font-size:30px;
+    color:lawngreen;
+    display:inline-block;
+    //visibility: hidden;
+}
+
+tr td{
+    font-size:25px;
+    padding: 15px;
+    border: 2px solid black;
+}
+
+#titlePage{
+    position:relative;
+    left:35%;
+    font-size:50px;
+    //text-align:center;
+}
+
+#aboutTitlePage{
+    position:relative;
+    left:35%;
+    font-size:50px;  
+}
+
+#aboutTitlePage2{
+    position:relative;
+    left:40%;
+    font-size:50px;  
+}
+
+#aboutTitlePage3{
+    position:relative;
+    left:30%;
+    font-size:50px;  
+}
+
+#group{
+	position:relative;
+	left:40%;
+}
+
+.groupNames{
+    font-size:40px;
+}
+
+h2{
+    font-size:30px;
+}
+
+.problem{
+    font-size:30px;
+    font-weight: bold;
+}
+
+.problemExplanation{
+    font-size:30px;
+}
+
+.step{
+    font-size:30px;
+}
+
+.about{
+    font-size:30px;
+    text-align: left;
+}
+
+#image{
+    position: relative;
+    left: 40%;
+}
+
+#imageElement{
+    float: right;
+}
+.tab{
+    margin-left:40px;
+}
+
+.menu{
+    text-align: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.menuTab{
+    float: left;
+    border-right:1px solid #bbb;
+}
+
+.menuTab:last-child {
+    //border-right: none;
+}
+
+.menuTab a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 30px;
+    text-decoration: none;
+}
+
+li a:hover{
+    background-color: #111;
+}
+
+#encryptionContainer{
+    height:350px;
+    width:600px;
+    background-color:#FF851B;
+}
+
+#informationContainer{
+    height:200px;
+    width:600px;
+    background-color:#9ACD32;
+}
+
+#numberContainer{
+    height:70px;
+    width:600px;
+    background-color:#FF851B;
+}
+
+#numberToTextContainer{
+    height:70px;
+    width:600px;
+    background-color:#FF851B;
+}
+
+.boldClass{
+    font-size:30px;
+    text-align: left;
+}
+
+#aboutDiv{
+    height:100%;
+    width: 75%;
+}
+
+#calculatorCenter{
+    position:relative;
+    left:500px;
+    //width:500px;
+    //height:1000px;
+   //background-color: black;
+}
+
+.red{
+    color:red;
+}
+
+.problemTitle{
+    font-size:50px;
+}

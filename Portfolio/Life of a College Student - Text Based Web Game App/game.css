@@ -1,0 +1,76 @@
+body{
+    background-color:DarkSlateGrey;
+}
+
+#gameStory{
+    position:relative;
+    left:24%;
+    text-align:center;
+    border:1px solid black;
+    border-radius:5px;
+    font-family:Tahoma;
+    margin:auto;
+    max-width:100%;
+    max-height:100%;
+    background-color:Steelblue;
+    font-size:15px;
+}
+
+#gamePicture{
+    position:relative;
+    left:31%;
+    border:1px solid black;
+    margin:auto;
+    max-width:500px;
+    max-height:500px;
+    width:auto;
+    height:auto;
+}
+
+#continue{
+    position:relative;
+    left:48%;
+    text-align:center;
+    font-family:Tahoma;
+    height:30px;
+    width:100px;
+}
+
+.choices{
+    position:relative;
+    border:1px solid black;
+    border-radius:5px;
+    max-width:100%;
+    max-height:100%;
+    font-size:15px;
+    text-align:left;
+    font-family:Tahoma;
+    left:42%;
+}
+
+.item{
+    height:100px;
+    width:100px;
+    position:relative;
+    display:inline-block;
+    left:39%;
+    border: 1px solid black;
+}
+
+.space{
+    position:relative;
+    height:25px;
+    width:50px;
+}
+
+#choice1{
+    background-color:darkcyan;
+}
+
+#choice2{
+    background-color: darkorange;
+}
+
+#choice3{
+    background-color: deepskyblue;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<HTML>
+    <head>
+        <link rel="stylesheet" href="Encrypt.css">
+    </head>
+    <body>
+        <ul class="menu">
+            <li class="menuTab"><a id ="aboutElement" href="About.html">About</a></li>
+            <li class="menuTab"><a id ="encryptionElement" href="Encryption.html">Encryption</a></li>
+            <li class="menuTab"><a id ="decryptionElement" href="Decryption.html">Decryption</a></li>
+            <li class="menuTab"><a id ="problemElement" href ="Problems.html">Problems</a></li>
+            <li class="menuTab"><a id ="calculatorElement" href = "Calculator.html">Calculator</a></li>
+            <li class="menuTab"><a id ="groupElement" href = "Group.html">Group Members</a></li>
+        </ul>
+        
+        <h1 id = "aboutTitlePage">RSA Cryptography Lesson Plan</h1>
+        
+        <img id ="image" src = "RSA.jpg">
+        <center>
+            <div id="aboutDiv">
+                <p class="about">The RSA crypto system was introduced by R. Rivest, A. Shamir, and L. Adleman in 1978. It is one of the first practical public-key cryptosystems and is widely used for secure data transmission. Before this system was introduced, encrypted messages sent between two parties, needed both to share an identical key for encryption and decryption. This presented a problem especially if both parties are unable to meet to establish that key or if one party needed to communicate with multiple parties. For example, for a bank to send and receive messages, they would have to keep track of all the different unique keys for all their customers. This becomes quite cumbersome.</p>
+                
+                <p class="about">RSA encryption works on the idea of publishing a public-key so any one can encrypt a message and send it. And only the intended recipient can decrypt the message. Imagine you buy a lock and key, and you publish the lock so anyone can use it to lock and send you a message. Since there is only one key, your key is the only one that can open the lock to decrypt the message. </p>
+                
+                <p class="about">To use RSA Encryption, you must create and publish a public-key based on two very large prime numbers along with an auxiliary value. The prime numbers are kept secret, so only someone with the knowledge of the prime numbers can decrypt the message. Two extremely large prime numbers are multiplied together to get the auxiliary value (N) which is a part of the public key. Φ (phi) of N is calculated and a number E is chosen that is greater than 1, less than Φ(N) and a coprime of N and Φ(N). The numbers N and E are published as the public key. The two very large primes are then used to find the decryption value.</p>
+
+                <p class="about">RSA relies on the fact that it is very hard to factorize product of two large prime numbers. The inverse of RSA to find the decryption value without knowing the original prime numbers is very hard to crack.</p>
+
+                <p class="about">In the next sections we will illustrate Encryption and Decryption.</p>
+            </div>
+        </center>
+        <script src="jquery-1.9.1.min.js"></script>
+	    <script src="About.js"></script>
+    </body>
+</HTML>

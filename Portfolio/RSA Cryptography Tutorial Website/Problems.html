@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<HTML>
+    <head>
+        <link rel="stylesheet" href="Encrypt.css">
+    </head>
+    <body>
+        <ul class="menu">
+            <li class="menuTab"><a id ="aboutElement" href="About.html">About</a></li>
+            <li class="menuTab"><a id ="encryptionElement" href="Encryption.html">Encryption</a></li>
+            <li class="menuTab"><a id ="decryptionElement" href="Decryption.html">Decryption</a></li>
+            <li class="menuTab"><a id ="problemElement" href ="Problems.html">Problems</a></li>
+            <li class="menuTab"><a id ="calculatorElement" href = "Calculator.html">Calculator</a></li>
+            <li class="menuTab"><a id ="groupElement" href = "Group.html">Group Members</a></li>
+        </ul>
+        
+        <h1 id = "titlePage">RSA Problems</h1>
+        
+        <br>
+        
+        <h1 class="problemTitle">Encryption Process Exercises</h1>
+        
+        <!-- Problem one -->
+        <p class="problem"><b>Problem 1. Write the word "TEST" in number representation(using A = 0, B = 1, ...):</b></p>
+        <ul>
+            <li class="problem">Note:Please use commas to seperate each letter number representation.</li>
+        </ul>
+        <br>
+        ENTER THE CORRECT NUMBERS: <input type="text" id="exercise1Input">
+        <button id="exercise1">Check Answer</button>
+        <br>
+        
+        <!-- Problem two -->
+        <p class="problem">Problem 2. What is the definition of relatively prime?</p>
+        <form action="">
+            <input type="radio" name="p1AnswerP1" value="pw1Answer1Value" id="p1R1" class="r"> Two integers are relatively prime if they share no common positive factors (divisors) except 1.<br>
+            <input type="radio" name="p1AnswerP2" value="pwAnswer2Value" id="p1R2" class="r"> Two integers are relatively prime if they share only two common positive factors (divisors).<br>
+            <input type="radio" name="p1AnswerP3" value="pwAnswer3Value" id="p1R3" class="r"> An integer is relatively prime if it is divisible by the sum of its digits.<br>
+            <input type="radio" name="p1AnswerP4" value="pwAnswer4Value" id="p1R4" class="r"> An integer is relatively prime if it is divisible by the product of its digits.
+        </form>
+        <br>
+        <button id="exercise2">Check Answer</button>
+    
+        <br>
+        
+        <!-- Problem 3 -->
+        <p class="problem">Problem 3. Must P and Q be even?</p>
+        <form>
+            <input type="radio" id="p3True">True<br>
+            <input type="radio" id="p3False">False<br>
+        </form>
+        <br>
+        <button id="exercise3">Check Answer</button>
+        <br>
+        
+        <!-- Problem 4 -->
+        <p class="problem">Problem 4. Must P and Q be prime?</p>
+        <form>
+            <input type="radio" id="p4True">True<br>
+            <input type="radio" id="p4False">False<br>
+        </form>
+        <br>
+        <button id="exercise4">Check Answer</button>
+        <br>
+        
+        <!-- Problem 5 -->
+        <p class="problem">Problem 5. Choose a correct set of P and Q:</p>
+        <form>
+            <input type="radio" id="p5Option1">P = 9, Q = 18<br>
+            <input type="radio" id="p5Option2">P = 12, Q = 3<br>
+            <input type="radio" id="p5Option3">P = 13, Q = 5<br>
+            <input type="radio" id="p5Option4">P = 7, Q = 14<br>
+        </form>
+        <br>
+        <button id="exercise5">Check Answer</button>
+        <br>
+        
+        <!-- Problem 6 -->
+        <p class="problem">Problem 6. What information does Euler’s totient function (ϕ(n) = m) tell us:</p>
+        <form>
+            <input type="radio" id="p6Option1">The number of odd integers less than n<br>
+            <input type="radio" id="p6Option2">The number of integers relatively prime to n<br>
+            <input type="radio" id="p6Option3">The number of even integers less than n<br>
+            <input type="radio" id="p6Option4">The number of integers relatively prime to n-1<br>
+        </form>
+        <br>
+        <button id="exercise6">Check Answer</button>
+        <br>
+        
+        <br>
+        
+        <h1 class="problemTitle"><b>Encryption Problems</b></h1>
+        
+        <h3><b>Note: Please write answers in the following format: number, number, ... (i.e. 0,0,0, ...)</b></h3>
+        
+        <br>
+        
+        <p class="problem">Problem One:</p>
+        <p class="problemExplanation">When p = 5, q = 7, E = 11. Encrypt the following text: RSA</p>
+        
+        ENTER THE CORRECT CIPHER TEXT <input type="text" id="encryptionInput1">
+        <button id = "encryptSubmit1">Check Answer</button>  <!-- <p class="inline"> &#10004;</p> -->
+        <br>
+        <br>
+        
+        <p class="problem">Problem Two:</p>
+        <p class="problemExplanation">When p = 3, q = 11, E = 9. Encrypt the following text: COOL</p>
+        
+        ENTER THE CORRECT CIPHER TEXT <input type="text" id="encryptionInput2">
+        <button id = "encryptSubmit2">Check Answer</button>
+        <br>
+        <br>
+        
+        <p class="problem">Problem Three:</p>
+        <p class="problemExplanation">When p = 5, q = 11, E = 7. Encrypt the following text: ALGEBRA</p>
+        
+        ENTER THE CORRECT CIPHER TEXT <input type="text" id="encryptionInput3">
+        <button id = "encryptSubmit3">Check Answer</button>
+        <br>
+        <br>
+        
+        <p class="problem">Problem Four:</p>
+        <p class="problemExplanation">When p = 13, q = 2, E = 5. Encrypt the following text: CIPHER</p>
+        
+        ENTER THE CORRECT CIPHER TEXT <input type="text" id="encryptionInput4">
+        <button id = "encryptSubmit4">Check Answer</button>
+        <br>
+        <br>
+        
+        <p class="problem">Problem Five:</p>
+        <p class="problemExplanation">When p = 3, q = 7, E = 5. Encrypt the following text: ENCRYPT</p>
+        
+        ENTER THE CORRECT CIPHER TEXT <input type="text" id="encryptionInput5">
+        <button id = "encryptSubmit5">Check Answer</button>
+        <br>
+        <br>
+        
+        <br>
+        
+        <h1 class="problemTitle">Decryption Problems</h1>
+        <h3><b>Note: Please write answers with no commas or numbers.</b></h3>
+        
+        <br>
+        <p class="problem">Problem One:</p>
+        <p class="problemExplanation">When p = 5, q = 7, E = 11. Decrypt the following ciphertext: 18, 14, 3, 15, 20, 24, 9, 33</p>
+        
+        ENTER THE CORRECT DECRYPTED TEXT <input type="text" id="decryptionInput1">
+        <button id = "decryptSubmit1">Check Answer</button>
+        <br>
+        <br>
+        
+        
+        <p class="problem">Problem Two:</p>
+        <p class="problemExplanation">When p = 3, q = 5, E = 7. Decrypt the following ciphertext: 7, 5, 3, 1, 4, 8</p>
+        
+        ENTER THE CORRECT DECRYPTED TEXT <input type="text" id="decryptionInput2">
+        <button id = "decryptSubmit2">Check Answer</button>
+        <br>
+        <br>
+        
+        
+        <p class="problem">Problem Three:</p>
+        <p class="problemExplanation">When p = 13, q = 3, E = 5. Decrypt the following ciphertext: 9, 10 ,20, 23, 6, 33, 37</p>
+        
+        ENTER THE CORRECT DECRYPTED TEXT <input type="text" id="decryptionInput3">
+        <button id = "decryptSubmit3">Check Answer</button>
+        <br>
+        <br>
+        
+        <p class="problem">Problem Four:</p>
+        <p class="problemExplanation">When p = 7, q = 3, E = 5. Decrypt the following ciphertext: 9, 7, 14, 16, 9</p>
+        
+        ENTER THE CORRECT DECRYPTED TEXT <input type="text" id="decryptionInput4">
+        <button id = "decryptSubmit4">Check Answer</button>
+        <br>
+        <br>
+        
+        <p class="problem">Problem Five:</p>
+        <p class="problemExplanation">When p = 17, q = 3, E = 7. Decrypt the following ciphertext: 26, 23, 4, 30, 13, 17, 43</p>
+        
+        ENTER THE CORRECT DECRYPTED TEXT <input type="text" id="decryptionInput5">
+        <button id = "decryptSubmit5">Check Answer</button>
+        
+        <script src="jquery-1.9.1.min.js"></script>
+        <script src="Problems.js"></script>
+    </body>
+</HTML>
